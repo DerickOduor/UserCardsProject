@@ -81,6 +81,8 @@ public class CardsController {
             card.setUser(user);
             card.setStatus(cardStatus);
             cardService.save(card);
+            cardResponse.setStatus(true);
+            cardResponse.setDescription("Success");
             return ResponseEntity.ok(cardResponse);
         }catch (Exception ex){
             ex.printStackTrace();
@@ -99,6 +101,8 @@ public class CardsController {
             card.setName(cardRequest.getName());
             card.setDescription(cardRequest.getDescription());
             card.setStatus(cardStatus);
+            cardResponse.setStatus(true);
+            cardResponse.setDescription("Success");
             return ResponseEntity.ok(cardResponse);
         }catch (Exception ex){
             ex.printStackTrace();
@@ -111,6 +115,8 @@ public class CardsController {
         CardResponse cardResponse=new CardResponse();
         try{
             cardService.deleteCardById(id);
+            cardResponse.setStatus(true);
+            cardResponse.setDescription("Success");
             return ResponseEntity.ok(cardResponse);
         }catch (Exception ex){
             ex.printStackTrace();
