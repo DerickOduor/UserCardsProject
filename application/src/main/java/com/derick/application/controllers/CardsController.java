@@ -74,7 +74,7 @@ public class CardsController {
             System.out.println(gson.toJson(cardRequest));
             User user=userService.findByUsername("derickuser1");
             CardStatus cardStatus=cardStatusService.findCardStatusById(1l);
-            System.out.println(gson.toJson(cardStatus));
+            //System.out.println(gson.toJson(cardStatus));
             //CardStatus cardStatus_ = cardStatus.orElseThrow(() -> new IllegalStateException("No status found"));
 
             Card card=new Card(cardRequest.getName(),cardRequest.getColor(),cardRequest.getDescription());
